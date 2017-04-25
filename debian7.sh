@@ -157,7 +157,6 @@ cd
 sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
 #sed -i '/Port 22/a Port 80' /etc/ssh/sshd_config
 sed -i '/Port 22/a Port 143' /etc/ssh/sshd_config
-sed -i 's/#Banner/Banner/g' /etc/ssh/sshd_config
 service ssh restart
 
 # install dropbear
@@ -228,7 +227,6 @@ wget -O user-login.sh "https://raw.githubusercontent.com/ForNesiaFreak/FNS_Debia
 wget -O user-expired.sh "https://raw.githubusercontent.com/ForNesiaFreak/FNS_Debian7/fornesia.com/freak/user-expired.sh"
 #wget -O userlimit.sh "https://raw.githubusercontent.com/suryadewa/fornesiavps/fns/limit.sh"
 wget -O user-list.sh "https://raw.githubusercontent.com/ForNesiaFreak/FNS_Debian7/fornesia.com/freak/user-list.sh"
-wget -O /etc/issue.net "https://raw.githubusercontent.com/ForNesiaFreak/FNS_Debian7/fornesia.com/null/banner"
 echo "0 0 * * * root /root/user-expired.sh" > /etc/cron.d/user-expired
 #echo "@reboot root /root/userlimit.sh" > /etc/cron.d/userlimit
 echo "0 0 * * * root /usr/bin/reboot" > /etc/cron.d/reboot
